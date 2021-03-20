@@ -16,38 +16,38 @@
 function bankTransaction(balances, requests){
 	for(let i = 0; i < requests.length;i ++){
   	    transaction = requests[i].split(" ");
-        switch(transaction[0]){
-            case "withdraw":
-                if(transaction[1] - 1 < balances.length){
-                withdrawAmount = parseInt(transaction[2]);
-                balances[transaction[1] - 1] -= withdrawAmount;
-            }else{
-                console.log("Error on transaction " + (i+1) + ", please check your accounts and try again");
-            }
-            break;
+		switch(transaction[0]){
+			case "withdraw":
+				if(transaction[1] - 1 < balances.length){
+					withdrawAmount = parseInt(transaction[2]);
+					balances[transaction[1] - 1] -= withdrawAmount;
+				}else{
+					console.log("Error on transaction " + (i+1) + ", please check your accounts and try again");
+				}
+				break;
 
-            case "transfer":
-                if(transaction[1] - 1 < balances.length && transaction[2] - 1 < balances.length){
-                transferAmount = parseInt(transaction[3]);
-                balances[transaction[1] - 1] -= parseInt(transferAmount);
-                balances[transaction[2] - 1] +=parseInt(transferAmount);
-            }else{
-                    console.log("Error on transaction " + (i+1) + ", please check your accounts and try again");
-            }
-            break;
+			case "transfer":
+				if(transaction[1] - 1 < balances.length && transaction[2] - 1 < balances.length){
+					transferAmount = parseInt(transaction[3]);
+					balances[transaction[1] - 1] -= parseInt(transferAmount);
+					balances[transaction[2] - 1] +=parseInt(transferAmount);
+				}else{
+					console.log("Error on transaction " + (i+1) + ", please check your accounts and try again");
+				}
+				break;
 
-            case "deposit":
-                if(transaction[1] - 1 < balances.length){
-                depositAmount = parseInt(transaction[2]);
-                balances[transaction[1] - 1] += depositAmount;
-            }else{
-                    console.log("Error on transaction " + (i+1) + ", please check your accounts and try again");
-            }
-            break;
-            default:
-                console.log("Error on transaction " + (i+1) + ".You only can withdraw, transfer or deposit.");
-            break;
-        }
+			case "deposit":
+				if(transaction[1] - 1 < balances.length){
+					depositAmount = parseInt(transaction[2]);
+					balances[transaction[1] - 1] += depositAmount;
+				}else{
+					console.log("Error on transaction " + (i+1) + ", please check your accounts and try again");
+				}
+				break;
+			default:
+				console.log("Error on transaction " + (i+1) + ".You only can withdraw, transfer or deposit.");
+				break;
+		}
 	console.log(balances);
 	}
 }
