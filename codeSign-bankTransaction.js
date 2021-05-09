@@ -1,5 +1,5 @@
 /* 
-    [03-2020]
+    [03-2021]
     A simple function inspired by the problem that I found on CodeSignal website. The function proceeds with 
     some commons bank transactions (deposit, withdraw and transfer) for account balances inserted into the 
     'balances' args.
