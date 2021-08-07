@@ -10,5 +10,5 @@ def addBorder(picture):
         portrait.append('*'+picture[i]+'*')
 
     portrait.append(starline)
-    
+
     return portrait

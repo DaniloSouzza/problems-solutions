@@ -3,10 +3,10 @@
 # after get all 4 sides we put our little center square at coune :)
 
 def shapeArea(n):
-    
-    center =  n - 1
+
+    center = n - 1
     diagonals = 0
-    
+
     for x in range(1, center):
         diagonals += x
 

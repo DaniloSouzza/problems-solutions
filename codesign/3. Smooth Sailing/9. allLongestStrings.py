@@ -15,4 +15,3 @@ def allLongestStrings(inputArray):
             new_list.append(string)
 
     return new_list
-

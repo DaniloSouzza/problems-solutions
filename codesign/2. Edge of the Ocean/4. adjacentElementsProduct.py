@@ -6,5 +6,5 @@ def adjacentElementsProduct(inputArray):
     for i in range(len(inputArray)):
         if i != 0:
             sums.append(inputArray[i] * inputArray[i - 1])
-            
+
     return max(sums)
